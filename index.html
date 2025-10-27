@@ -270,7 +270,15 @@ src="https://www.facebook.com/tr?id=1133025748954857&ev=PageView&noscript=1"
 
   <p>© 2025 Remote Sales Accelerator</p>
 </footer>
-
+<script>
+  // Listen for any click on a CTA button or link with class 'cta'
+  document.querySelectorAll('.cta').forEach(btn => {
+    btn.addEventListener('click', () => {
+      fbq('track', 'Lead');
+      console.log('✅ Lead event fired');
+    });
+  });
+</script>
 </body>
 </html>
 
